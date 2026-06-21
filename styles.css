@@ -1,0 +1,66 @@
+.aj-redacted,
+.aj-redacted-el {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: rgba(17, 17, 17, 0.86) !important;
+  border-radius: 0.25em;
+  padding: 0 0.2em;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.95);
+  cursor: help;
+  transition: color 120ms ease, text-shadow 120ms ease, background-color 120ms ease;
+  position: relative !important;
+  z-index: 100 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block;
+}
+
+.aj-redacted:hover,
+.aj-redacted-el:hover {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: rgba(255, 230, 109, 0.42) !important;
+  text-shadow: none;
+}
+
+.kix-canvas-tile-content {
+  z-index: 999999 !important;
+  position: absolute !important;
+}
+
+.kix-canvas-tile-content .aj-redacted-el {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+body.aj-docs-redacted .kix-canvas-tile-content,
+body.aj-docs-redacted .kix-canvas-tile-content canvas,
+body.aj-docs-redacted .kix-page-content-wrapper,
+body.aj-docs-redacted .kix-page {
+  filter: blur(6px) contrast(0.9) !important;
+  transition: filter 120ms ease;
+}
+
+body.aj-docs-redacted .kix-canvas-tile-content:hover,
+body.aj-docs-redacted .kix-canvas-tile-content:hover canvas,
+body.aj-docs-redacted .kix-page-content-wrapper:hover,
+body.aj-docs-redacted .kix-page:hover {
+  filter: none !important;
+}
+
+body.aj-docs-redacted::before {
+  content: "Anti Judol: Dokumen terdeteksi berisi konten perjudian. Hover halaman dokumen untuk melihat sementara.";
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  background: rgba(17, 17, 17, 0.92);
+  color: #fff;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  padding: 10px 12px;
+  border-radius: 8px;
+  pointer-events: none;
+}

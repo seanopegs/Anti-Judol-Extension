@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti Judol Checker</title>
+    <link rel="stylesheet" href="website.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <header class="topbar">
+          <div>
+            <div class="title-row">
+              <h1>Anti Judol Checker</h1>
+              <span id="modelInfo" class="info" title="Model memuat...">i</span>
+            </div>
+            <p id="statusText">Tempel teks yang ingin dicek.</p>
+          </div>
+          <label class="threshold">
+            <span>Sensitivitas</span>
+            <input id="threshold" type="range" min="0.10" max="0.95" step="0.05" value="0.60" />
+            <strong id="thresholdLabel">0.60</strong>
+          </label>
+        </header>
+
+        <textarea id="textInput" spellcheck="false" placeholder="Paste teks di sini..."></textarea>
+
+        <div class="actions">
+          <button id="checkButton" type="button">Cek teks</button>
+          <button id="clearButton" type="button" class="secondary">Bersihkan</button>
+        </div>
+
+        <section id="result" class="result idle" aria-live="polite">
+          <strong>Belum dicek</strong>
+          <span>Hasil akan muncul di sini.</span>
+        </section>
+      </section>
+    </main>
+
+    <script src="website.js"></script>
+  </body>
+</html>

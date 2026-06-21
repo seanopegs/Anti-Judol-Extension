@@ -1,0 +1,163 @@
+:root {
+  color-scheme: light;
+  color: #172033;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f7fb;
+  margin: 0;
+  width: 320px;
+}
+
+main {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.model {
+  align-items: center;
+  color: #5c687a;
+  display: flex;
+  font-size: 12px;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.info {
+  align-items: center;
+  background: #e8eef7;
+  border: 1px solid #cfd8e6;
+  border-radius: 999px;
+  color: #174ea6;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 800;
+  height: 18px;
+  justify-content: center;
+  line-height: 1;
+  width: 18px;
+}
+
+.switch {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background: #c8d2e0;
+  border-radius: 999px;
+  height: 24px;
+  position: relative;
+  transition: background 160ms ease;
+  width: 44px;
+}
+
+.slider::after {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(20, 32, 54, 0.2);
+  content: "";
+  height: 18px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  transition: transform 160ms ease;
+  width: 18px;
+}
+
+.switch input:checked + .slider {
+  background: #1f7a4d;
+}
+
+.switch input:checked + .slider::after {
+  transform: translateX(20px);
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #dce3ee;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+label,
+.label {
+  color: #344154;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.value {
+  color: #174ea6;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+input[type="range"] {
+  accent-color: #174ea6;
+  width: 100%;
+}
+
+.hint {
+  color: #657184;
+  font-size: 12px;
+}
+
+button {
+  align-items: center;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+#websiteButton {
+  background: #174ea6;
+  color: #fff;
+}
+
+#websiteButton:hover {
+  background: #123f85;
+}
+
+#status {
+  color: #536173;
+  font-size: 12px;
+  min-height: 16px;
+}

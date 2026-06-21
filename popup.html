@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti Judol Sensor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Anti Judol</h1>
+          <div class="model">
+            <span>Deteksi lokal</span>
+            <span id="modelInfo" class="info" title="Model memuat...">i</span>
+          </div>
+        </div>
+        <label class="switch" title="Aktifkan sensor halaman">
+          <input id="enabled" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </header>
+
+      <section class="panel">
+        <div class="row">
+          <label for="threshold">Sensitivitas</label>
+          <span id="thresholdLabel" class="value">0.60</span>
+        </div>
+        <input id="threshold" type="range" min="0.10" max="0.95" step="0.05" value="0.60" />
+        <div class="hint">Turunkan kalau ingin sensor lebih agresif.</div>
+      </section>
+
+      <button id="websiteButton" type="button">Buka checker</button>
+      <div id="status">Siap</div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
